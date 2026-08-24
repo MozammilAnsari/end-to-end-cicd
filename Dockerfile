@@ -1,8 +1,11 @@
 # Base image
 FROM python:3.14-slim
 
-#Working directory
-WORKDIR /"flask app"
+# Use a simple, safe working directory
+WORKDIR /app
+
+# Keep Python output buffered for logs
+ENV PYTHONUNBUFFERED=1
 
 #Copy everything
 COPY . .
