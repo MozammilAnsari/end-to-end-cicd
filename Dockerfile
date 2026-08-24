@@ -1,11 +1,8 @@
 # Base image
 FROM python:3.14-slim
 
-# Use a simple, safe working directory
-WORKDIR /app
-
-# Keep Python output buffered for logs
-ENV PYTHONUNBUFFERED=1
+#Working directory
+WORKDIR /"END-TO-END-CICD"
 
 #Copy everything
 COPY . .
