@@ -41,7 +41,7 @@ pipeline {
             steps{
             sh '''
             echo "Stopping old container (if exists)"
-            docker rm -f flask-container || true
+            docker rm -f flaskapp || true
             echo 'Running docker container'
             docker run -p 5000:5000 --name flaskapp -d modassir7488/flaskapplication:lts
             '''
